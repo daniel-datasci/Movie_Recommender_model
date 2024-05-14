@@ -67,7 +67,7 @@ def main():
         return recommendations.index
 
     # Sidebar for selecting a movie
-    selected_movie = st.sidebar.text_input('Enter a movie name:')
+    selected_movie = st.sidebar.selectbox('Select a Movie:', ratings.index)
 
     if selected_movie:
         # Display the selected movie's details
