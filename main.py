@@ -48,6 +48,8 @@ def main():
     # Drop duplicates
     df.drop_duplicates(subset=['user_id', 'title'], inplace=True)
 
+#===================================================================================================================================
+
     # Calculate mean ratings and number of ratings for each movie
     ratings = pd.DataFrame(df.groupby('title')['rating'].mean())
     ratings['numOfRatings'] = pd.DataFrame(df.groupby('title')['rating'].count())
