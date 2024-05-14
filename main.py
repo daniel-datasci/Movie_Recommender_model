@@ -2,7 +2,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 import streamlit as st
 
 # Load the datasets
@@ -95,12 +94,6 @@ def main():
             # Number of ratings
             num_ratings = ratings.loc[movie]['numOfRatings']
             st.bar_chart(pd.DataFrame({'numOfRatings': [num_ratings]}, index=[movie]))
-            
-
-            # Joint plot of ratings and number of ratings
-            st.write('### Joint Plot of Ratings and Number of Ratings')
-            sns.jointplot(x='rating', y='numOfRatings', data=ratings)
-            st.pyplot(plt)
             st.markdown("")
             st.markdown("")
 
