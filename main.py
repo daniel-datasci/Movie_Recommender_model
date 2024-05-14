@@ -86,14 +86,9 @@ def main():
             st.write(f'## {movie}')
 
             # Distribution of ratings
-            st.write('### Distribution of Ratings')
+            st.write('### How People Rated This Movie')
             movie_ratings = df[df['title'] == movie]['rating']
             st.bar_chart(movie_ratings.value_counts())
-            
-
-            # Number of ratings
-            num_ratings = ratings.loc[movie]['numOfRatings']
-            st.bar_chart(pd.DataFrame({'numOfRatings': [num_ratings]}, index=[movie]))
             st.markdown("")
             st.markdown("")
 
